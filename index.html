@@ -61,6 +61,39 @@
     transition: all ease 0.3s;
     color: black;
   }
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0px;
+    margin-top: 0px;
+    padding: 0px;
+    margin: 0px;
+  }
+  .flex-child {
+      flex: 1;
+      border: 1.5px dotted white;
+      border-radius: 10px;
+      padding: 5px;
+      margin:5px;
+  }
+  .dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .dashedline {
+    margin-bottom: 4px;
+    height: 1.5px;
+    width: 50px;
+    background-color: black;
+    display: inline-block;
+    background:
+      repeating-linear-gradient(to right,black 0,black 5px,transparent 5px,transparent 7px)
+      /*5px red then 2px transparent -> repeat this!*/
+    }
+  }
   </style>
 </head>
 
@@ -90,7 +123,7 @@ $(document).ready(function () {
   <div class="profile">
     <div class="profile-name">
       <span class="name">Aboudy Kreidieh</span><br>
-      <span class="job">PhD Candidate</span>
+      <span class="job">Ph.D. Candidate</span>
     </div>
     <figure class="profile-image">
       <img src="img/profile.png" alt="">
@@ -99,7 +132,7 @@ $(document).ready(function () {
       <li></li>
       <li style="margin-bottom: -20px"><p><span>Name:</span> Aboudy Kreidieh</p></li>
       <!-- <li style="margin-bottom: -20px"><p><span>Birthday:</span> March 23, 1994</p></li> -->
-      <li style="margin-bottom: -20px"><p><span>Role:</span> PhD Candidate</p></li>
+      <li style="margin-bottom: -20px"><p><span>Role:</span> Ph.D. Candidate</p></li>
       <li style="margin-bottom: -20px"><p><span>Organization:</span> UC Berkeley</p></li>
       <li style="margin-bottom: -20px"><p><span>Email:</span> aboudy@berkeley.edu</p></li>
     </ul>
@@ -154,39 +187,49 @@ $(document).ready(function () {
         <section class="about-me line col-md-12 padding_30 padbot_45">
           <div class="section-title"><span></span><h2>About Me</h2></div>
           <p class="top_30">
-            My name is Abdul Rahman (Aboudy) Kreidieh. I am a fourth year PhD candidate at the University of
-            California, Berkeley, currently advised by
+            My name is Abdul Rahman (Aboudy) Kreidieh. I am a Ph.D. candidate at
+            the University of California, Berkeley, currently advised by
             <a href="https://bayen.berkeley.edu/alex-bayen" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Alexandre M. Bayen</a>. I am a member of
             <a href="https://bair.berkeley.edu/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Berkeley Artificial Intelligence Research (BAIR)</a>,
-            <a href="https://deepdrive.berkeley.edu/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Berkeley Deep Drive (BDD)</a>, and the
-            <a href="https://circles-consortium.github.io/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Congestion Impacts Reduction via CAV-in-the-loop Lagrangian Energy Smoothing (CIRCLES)</a>
-            project, and have in the past served roles in the
-            <a href="https://rise.cs.berkeley.edu/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">RISE Lab</a>,
+            <a href="https://deepdrive.berkeley.edu/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Berkeley Deep Drive (BDD)</a>, and
+            <!-- and the -->
+            <!-- <a href="https://circles-consortium.github.io/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Congestion Impacts Reduction via CAV-in-the-loop Lagrangian Energy Smoothing (CIRCLES)</a> -->
             <a href="https://path.berkeley.edu/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">California PATH</a>,
+            and have previously served stints at
+            <!-- <a href="https://rise.cs.berkeley.edu/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">RISE Lab</a>, -->
             <a href="https://www.linkedin.com/company/toyota-itc/about/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Toyota InfoTech Labs</a>, and
             <a href="https://www.ail-sv.com/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Nissan Alliance SV Lab</a>.
             <br>
             <br>
-            I am interested in exploring the impacts of existing and upcoming mixed human/automated systems, and
-            designing tools that enhance the roles they serve in society.
-            <!-- , both societal and otherwise.  -->
-            This, I believe, is becoming increasingly relevant in recent years, with devices such as self-driving cars
-            and automated recommendation systems looking as though they will serve a more pervasive role in our everyday
-            lives.
+            I am interested in studying the societal impact of autonomous
+            systems in mixed human/automated settings. Throughout my Ph.D.,
+            I've worked on designing tools that help pose such problems in the
+            field of mixed-autonomy traffic, and have explored the efficacy of
+            machine learning tools in solving for societally beneficial
+            equilibria within such tasks. I hope to one day design the systems
+            that enable automated vehicles to
+            <!-- mitigate the ecological and social footprint  -->
+            improve the throughput and efficiency
+            of traffic in even sparsely automated transportation settings.
+            <!-- I am interested in exploring the impacts of existing and upcoming
+            mixed human/automated systems, and designing tools that enhance
+            the roles they serve in society. This, I believe, is becoming
+            increasingly relevant in recent years, with devices such as
+            self-driving cars and automated recommendation systems looking as
+            though they will serve a more pervasive role in our everyday lives. -->
             <!--  -->
-            During my PhD, I have studied the role of mixed-autonomy systems in the context of traffic control via
-            automated vehicles in particular.
+            <!-- During my Ph.D., I have studied the role of mixed-autonomy systems in
+            the context of traffic control via automated vehicles in particular. -->
             <!--  -->
-            Through my work, I aim to demonstrate that expertly designed automated driving systems, powered in part by
-            recent innovations in machine learning and artificial intelligence, can greatly improve the energy
-            efficiency, throughput, and overall human experience of driving in a variety of congested traffic settings.
-            <!--In the future, I hope to further play a vital role in the design and deployment of
-            similar societally-conscious systems in a variety of settings, transportation or otherwise. -->
+            <!-- Through my work, I aim to demonstrate that expertly designed
+            automated driving systems, powered in part by recent innovations in
+            machine learning and artificial intelligence, can greatly improve
+            the energy efficiency, throughput, and overall human experience of
+            driving in a variety of congested traffic settings. -->
             <br>
             <br>
             In my free time, you can find me catching the latest Liverpool game, binging as much content as I can handle,
             and, you know, stuff that sounds cool to you too.
-          </p>
         </section>
       </div>
 
@@ -284,7 +327,7 @@ $(document).ready(function () {
             </a>
             <a href="https://flow-project.github.io/" target="_blank" class="card">
               <div class="embed-responsive embed-responsive-16by9">
-                <img src="img/articles/flow.jpeg" class="card-img-top embed-responsive-item"/>
+                <img src="img/articles/UC-Berkeley-Tower-San-Francisco-Bay-11.jpg" class="card-img-top embed-responsive-item"/>
               </div>
               <div class="card-block">
                 <h6 class="card-title">Flow main website</h6>
@@ -303,36 +346,28 @@ $(document).ready(function () {
       <div class="row">
         <section class="line col-md-12 padding_30 padbot_45">
           <div class="section-title"><span></span><h2 s>Flow</h2></div>
-          <div class="top_60" style="float:right;width:60%;padding-left:1%;">
+          <div class="top_60" style="float:right;width:55%;padding-left:2%;">
             <img src="img/projects/fig8.gif" width="100%">
-            <br style="margin: 0em auto 1.25em;">
-            <center><p class="top_15"><b>Figure 1.</b> Sample AV control problem explored in Flow</p></center>
+            <!-- <br style="margin: 0em auto 1.25em;">
+            <center><p class="top_15"><b>Figure 1.</b> Sample AV control problem explored in Flow</p></center> -->
           </div>
           <p class="top_30">
-            Flow is an open-source framework developed at UC Berkeley that aims to enable
-            <!-- the ongoing exploration  -->
-            investigations on the applicability of
-            <!-- of -->
-            reinforcement learning (RL) to the field of intelligent transportation studies.
-            <!--  -->
-            It combines state-of-the-art traffic microsimulators
-            (<a href="https://www.eclipse.org/sumo/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">sumo</a>
-            and <a href="https://www.aimsun.com/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Aimsum</a>)
-            with several popular RL libraries
+            Flow is a tool for simulating interactions between human-driven and
+            autonomous agents in mixed-autonomy traffic flow settings.
+            It combines popular traffic microsimulators
+            (<a href="https://www.eclipse.org/sumo/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">sumo</a>,
+            <a href="https://www.aimsun.com/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Aimsum</a>)
+            and reinforcement learning libraries
             (<a href="https://docs.ray.io/en/releases-1.5.1/rllib.html" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">RLlib</a>,
-            <a href="https://rllab.readthedocs.io/en/latest/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">rllab</a>,
-            and <a href="https://stable-baselines.readthedocs.io/en/master/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">stable-baselines</a>,
-            among other) to test various RL algorithms and design control paradigms for traffic management
-            problems in simulation.
-            <br style="margin: 0em auto 1.25em;">
-            I have been fortunate enough to serve a central role in the development of Flow from its onset.
-            <!--  -->
-            Since then, I have contributed to the decision-making and implemention of many of the features that have
-            allowed Flow to flexibly support a variety of traffic control problems while also being computationally
-            efficient enough to handle sample-intensive RL algorithms.
-            <!--  -->
-            Today, the Flow community is fastly growing and is used by dozens of research groups and companies alike.
-            To learn more or try out Flow for yourself, feel free to explore the links below!
+            <!-- <a href="https://rllab.readthedocs.io/en/latest/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">rllab</a>, -->
+            <a href="https://stable-baselines.readthedocs.io/en/master/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">stable-baselines</a>,
+            etc.) within an MDP formalism of traffic whereby features such as
+            network geometry and agent behaviors may be flexibly assigned.
+            Through Flow, we have demonstrated that RL techniques under properly
+            specified objectives are highly effective at generating diverse and
+            surprising traffic mitigation strategies for varying representations
+            of traffic. You can learn more about these findings and explore the
+            framework for yourself via the links and papers below.
           </p>
           <p>
             <b>Webpage:</b> <a href="https://flow-project.github.io/" target="_blank">https://flow-project.github.io/</a>
@@ -353,42 +388,26 @@ $(document).ready(function () {
         <section class="line graybg col-md-12 padding_30 padbot_45">
           <div class="section-title"><span></span><h2>CIRCLES</h2></div>
           <p class="top_30">
-            The
-            <!-- Congestion Impacts Reduction via CAV-in-the-loop Lagrangian Energy Smoothing, or  -->
-            CIRCLES consortium is an interdisciplinary group established in 2020 and currently funded by the DOE.
-            <!-- and in collaboration with a number of automobile companies including Toyota and Nissan.  -->
-            This project has brought together experts from leading universities
-            <!-- throughout the United States  -->OpenAI's
-            in fields ranging
-            from transportation, machine learning, control theory, and cyber-physical systems with the hopes of
-            demonstrating that automated vehicles at even low penetration rates can improve the global energy-efficiency
-            of vehicles in typical congested highways.
-            <br style="margin: 0em auto 1.25em;">
-            During my PhD, I have worked alongside CIRCLES on a number of fronts. This has included designing the
-            framework used to simulate real-world traffic jams, and validating the performance of
-            various controllers within this simulation (an example of which can be seen in Figure 2).
-
-            Currently, I am looking to couple a number of these control strategies with modern techniques in
-            reinforcement and imitation learning to produce behaviors that are robust to anticipated real-world
-            limitations in communication, sensing, and control.
-
-            You can read more about each of my work via the links below.
+            <center><img src="img/projects/uncontrolled.gif" style="width:100%"></center>
           </p>
-          <center>
-             <img src="img/projects/uncontrolled.gif" style="width:100%">
-             <!-- <img src="img/projects/controlled.gif" style="width:49%"> -->
-          </center>
-          <center><p class="top_15"><b>Figure 2.</b>
-            Image of one of the designed network.
-            <!-- <b>Left:</b> Baseline with stop-and-go waves. <br> <b>Right:</b> Mixed-autonomy controller allowing for wave dissipation  -->
-          </p></center>
+          <p class="top_30">
+            CIRCLES is a multidisiplinary initiative aimed at demonstrating the
+            efficacy of small penetrations of automated vehicles at reducing
+            <em>global</em> energy emissions in congested highway networks.
+            During my Ph.D., I've worked closely with this group, designing some
+            of the simulation and validation tools used to validate the efficacy
+            of different congestion-mitigation strategies, and producing
+            behavior planning paradigms that improve the energy-emission of
+            traffic in both communicative and fully-decentralized mixed-autonomy
+            settings. You can read more about these efforts via the links below.
+          </p>
           <p>
             <b>Webpage:</b> <a href="https://circles-consortium.github.io/" target="_blank">https://circles-consortium.github.io/</a>
             <br style="margin: 0em auto 0.75em;">
             <b>Selected publications:</b>
             <ul style="list-style-position: inside; font-size: 13px; color: #4c4c4c; line-height: 24px; text-indent: -1em; padding-left: 1em; margin-top:-15px;">
+              <li><a href="https://www.researchgate.net/profile/Abdul-Rahman-Kreidieh/publication/361378544_Learning_energy-efficient_driving_behaviors_by_imitating_experts/links/62ace854a920e8693efbf8ef/Learning-energy-efficient-driving-behaviors-by-imitating-experts.pdf?_sg%5B0%5D=qgPtwVwpJq9X74toEhMeoHOe822ySAYo_D0PjNFZvphoJiemB6iEai4Ype40aQuoKLv2241hRk8PkkFa3QhoSQ.3IgAJRbxWmFMhSA3tcgWxPXE-h_g2QvlfE4m75PRN39NzELPHy8TUJMF8_yQXMaxTLPMqS_HHd9GEpPF-eIzdg&_sg%5B1%5D=v91aLUzfp_V2x0FuJv3eqooV8KOeMenUdyZ9L0xiyDdzhT4c_NZaSny1DNHJTLTk5EM3kwLtmrHqN_eZheN0BKExScXstoTg5eWiX0yGMp92.3IgAJRbxWmFMhSA3tcgWxPXE-h_g2QvlfE4m75PRN39NzELPHy8TUJMF8_yQXMaxTLPMqS_HHd9GEpPF-eIzdg&_iepl=" target="_blank">Learning energy-efficient driving behaviors by imitating experts.</a> A. Kreidieh, Z. Fu and A. Bayen, IEEE Conference on Intelligent Transportation Systems, 2022</li>
               <li><a href="https://arxiv.org/pdf/2104.11267.pdf" target="_blank">Integrated Framework of Vehicle Dynamics, Instabilities, Energy Models, and Sparse Flow Smoothing Controllers.</a> J.W. Lee, G. Gunter, R. Ramadan, S. Almatrudi, P. Arnold, J. Aquino, ... and B. Seibold. Proceedings of the Workshop on Data-Driven and Intelligent Cyber-Physical Systems (pp. 41-47), May 2021</li>
-              <li><a href="https://arxiv.org/pdf/2112.04688.pdf" target="_blank">Learning Generalizable Multi-Lane Mixed-Autonomy Behaviors in Single Lane Representations of Traffic.</a> A. Kreidieh, Y. Zhao, S. Parajuli, and A. Bayen. International Conference on Autonomous Agents and Multiagent Systems, 2022</li>
             </ul>
           </p>
         </section>
@@ -397,22 +416,49 @@ $(document).ready(function () {
       <!-- Hierarchical RL projects section -->
       <div class="row">
         <section class="line col-md-12 padding_30 padbot_45">
-          <div class="section-title"><span></span><h2>Hierarchical RL</h2></div>
-          <p class="top_30">
-            Hierarchical models for deep neural networks may serve a pivotal role in a variety of relevant reinforcement
-            learning (RL) problems. Similar to convolutional models in computer vision, and recurrents models in natural
-            language processing, hierarchical models exploit the natural (temporal) structure of RL problems. This
-            greatly benefits learning when feedback is sparsely defined or when success can only be achieved by
-            following unique behaviors across long periods of time. This benefit, I believe, is of particular
-            interest in traffic control problems, as the properties of traffic congestion propagate slowly through a
-            network, and as such require long-term reasoning to understand and solve. As a result, I have decidated a
-            significant portion of PhD studies tring to design models and optimization procedures that adapt
-            hierarchical RL algorithms to the field of mixed-autonomy traffic.
-            <!-- , and the types of hierarchical models that may best support and enhance the learned behaviors.  -->
-            You may learn more about some of these efforts from the links below.
+          <div class="section-title"><span></span><h2>Accelerating Hierarchical Learning</h2></div>
+          <p  align="right" class="top_30">
+            <span class="dashedline"></span> Agent Trajectory
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot" style="background-color: blue;"></span> Goal
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot" style="background-color: #2ece2e;"></span> Apple (+1)
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="dot" style="background-color: red;"></span> Bomb (-1)
+            &nbsp;&nbsp;&nbsp;
           </p>
-          <img src="img/projects/hrl-cg.png" width="100%" alt="">
-          <center><p class="top_15"><b>Figure 3.</b> A diagram of the explored hierarchical design and proposed approach</p></center>
+          <div class="flex-container">
+            <div class="flex-child magenta">
+              <center style="font-size:14px;"><b>Standard HRL</b></center>
+              <center>
+                <img style="padding-top: 5px; padding-right: 2.5%" src="img/projects/ant-hrl.gif" width="45%"/>
+                <img style="padding-top: 5px; padding-left: 2.5%" src="img/projects/ant-hrl.png" width="45%"/>
+              </center>
+          </div>
+          <div class="flex-child green">
+            <center style="font-size:14px;"><b>Cooperative HRL</b></center>
+              <center>
+                <img style="padding-top: 5px; padding-right: 2.5%" src="img/projects/ant-cher.gif" width="45%"/>
+                <img style="padding-top: 5px; padding-left: 2.5%" src="img/projects/ant-cher.png" width="45%"/>
+              </center>
+          </div>
+          <p class="top_30">
+            Hierarchical RL techniques present promising
+            methods for enabling structured exploration in complex long-term
+            planning problems. Similar to convolutional models in computer
+            vision and recurrents models in natural language processing,
+            hierarchical models exploit the natural temporal structure of
+            sequential decision-making problems, thereby accelerating learning
+            in settings where feedback is sparse or delayed. Such systems,
+            however, struggle when concurrently training all levels within a
+            hierarchy, thereby hindering the flexibility and performance of
+            existing algorithms. In this study, we draw connections between
+            these and similar challenges in multi-agent RL, and hypothesize
+            that increased cooperation between
+            policy levels in a hierarchy may help ameliorate hierarchical credit
+            assignment and exploration.
+            We demonstrate that inducing cooperation accelerates learning and
+            produces policies which display better transfer to new tasks,
+            highlighting the benefits of our method in learning task-agnostic
+            lower-level skills.
+          </p>
           <p>
             <b>Webpage:</b> <a href="https://sites.google.com/berkeley.edu/cooperative-hrl" target="_blank">https://sites.google.com/berkeley.edu/cooperative-hrl</a>
             <br style="margin: 0em auto 0.75em;">
@@ -452,6 +498,7 @@ $(document).ready(function () {
           <p class="top_30">
             <b>Refereed journal publications (published, in press, accepted)</b>
             <ol class="top_15">
+              <li><a href="https://ieeexplore.ieee.org/abstract/document/9765650" target="_blank">Unified Automatic Control of Vehicular Systems With Reinforcement Learning.</a> Z. Yan, A. Kreidieh, E. Vinitsky, A. Bayen, and C. Wu. IEEE Transactions on Automation Science and Engineering, 2022</li>
               <li><a href="https://arxiv.org/pdf/1710.05465.pdf" target="_blank">Flow: A modular learning framework for mixed autonomy traffic.</a> C. Wu, A. Kreidieh, K. Parvate, E. Vinitsky, and A. Bayen. IEEE Transactions on Robotics, 2021</li>
               <li><a href="https://ietresearch.onlinelibrary.wiley.com/doi/pdf/10.1049/iet-its.2018.5618" target="_blank">Multi-receptive field graph convolutional neural networks for pedestrian detection.</a> C. Shen, X. Zhao, X. Fan, X. Lian, F. Zhang, A. Kreidieh, and Z. Liu. IET Intelligent Transport Systems, 13(9), 1319-1328, 2019</li>
             </ol>
@@ -473,6 +520,8 @@ $(document).ready(function () {
           <p class="top_30">
             <b>Engineering and computer science conferences (published, in press, accepted)</b>
             <ol class="top_15">
+              <li><a href="https://www.researchgate.net/profile/Abdul-Rahman-Kreidieh/publication/361378544_Learning_energy-efficient_driving_behaviors_by_imitating_experts/links/62ace854a920e8693efbf8ef/Learning-energy-efficient-driving-behaviors-by-imitating-experts.pdf?_sg%5B0%5D=qgPtwVwpJq9X74toEhMeoHOe822ySAYo_D0PjNFZvphoJiemB6iEai4Ype40aQuoKLv2241hRk8PkkFa3QhoSQ.3IgAJRbxWmFMhSA3tcgWxPXE-h_g2QvlfE4m75PRN39NzELPHy8TUJMF8_yQXMaxTLPMqS_HHd9GEpPF-eIzdg&_sg%5B1%5D=v91aLUzfp_V2x0FuJv3eqooV8KOeMenUdyZ9L0xiyDdzhT4c_NZaSny1DNHJTLTk5EM3kwLtmrHqN_eZheN0BKExScXstoTg5eWiX0yGMp92.3IgAJRbxWmFMhSA3tcgWxPXE-h_g2QvlfE4m75PRN39NzELPHy8TUJMF8_yQXMaxTLPMqS_HHd9GEpPF-eIzdg&_iepl=" target="_blank">Learning energy-efficient driving behaviors by imitating experts.</a> A. Kreidieh, Z. Fu and A. Bayen, IEEE Conference on Intelligent Transportation Systems, 2022</li>
+              <li><a href="https://www.researchgate.net/publication/361599275_Non-local_Evasive_Overtaking_of_Downstream_Incidents_in_Distributed_Behavior_Planning_of_Connected_Vehicles" target="_blank">Non-local Evasive Overtaking of Downstream Incidents in Distributed Behavior Planning of Connected Vehicles.</a> A. Kreidieh, Y. Farid, and K. Oguchi. IEEE Intelligent Vehicles Symposium (IV). 2021.
               <li><a href="https://arxiv.org/pdf/2112.04688.pdf" target="_blank">Learning Generalizable Multi-Lane Mixed-Autonomy Behaviors in Single Lane Representations of Traffic.</a> A. Kreidieh, Y. Zhao, S. Parajuli, and A. Bayen. International Conference on Autonomous Agents and Multiagent Systems, 2022</li>
               <li><a href="https://arxiv.org/pdf/2104.11267.pdf" target="_blank">Integrated Framework of Vehicle Dynamics, Instabilities, Energy Models, and Sparse Flow Smoothing Controllers.</a> J.W. Lee, G. Gunter, R. Ramadan, S. Almatrudi, P. Arnold, J. Aquino, ... and B. Seibold. Proceedings of the Workshop on Data-Driven and Intelligent Cyber-Physical Systems (pp. 41-47), May 2021</li>
               <li><a href="https://trid.trb.org/view/1759583" target="_blank">Continual Learning of Microscopic Traffic Models Using Neural Networks.</a> YZ. Farid, AR. Kreidieh, F. Khaligi, H. Lobel, and A. Bayen, 100th Annual Meeting Transportation Research Board, Washington, DC, 2021</li>
@@ -494,21 +543,6 @@ $(document).ready(function () {
           </p>
         </section>
       </div>
-
-      <!-- Other pubs section -->
-      <!-- <div class="row">
-        <section class="line col-md-12 padding_30 padbot_45">
-          <div class="section-title"><span></span><h2>Other Publications</h2></div>
-          <p class="top_30">
-            <b>Patents</b>
-            <ol class="top_15">
-              <li>blank</li>
-              <li>blank</li>
-              <li>blank</li>
-            </ol>
-          </p>
-        </section>
-      </div> -->
     </div>
 
     <!-- Workshops / Teaching Page
