@@ -46,58 +46,58 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
 
   <style>
-  .button {
-    background-color: #ffc500;
-    border-radius: 7px;
-    color: #4c4c4c;
-    padding: 5px 20px;
-    text-align: center;
-    font-size: 13px;
-    margin: 4px 4px;
-    cursor: pointer;
-  }
-  .button:hover{
-    background-color: #ffb100;
-    transition: all ease 0.3s;
-    color: black;
-  }
-  .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 0px;
-    margin-top: 0px;
-    padding: 0px;
-    margin: 0px;
-  }
-  .flex-child {
-      flex: 1;
-      border: 1.5px dotted white;
-      border-radius: 10px;
-      padding: 5px;
-      margin:5px;
-  }
-  .dot {
-    height: 10px;
-    width: 10px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  .dashedline {
-    margin-bottom: 4px;
-    height: 1.5px;
-    width: 50px;
-    background-color: black;
-    display: inline-block;
-    background:
-      repeating-linear-gradient(to right,black 0,black 5px,transparent 5px,transparent 7px)
-      /*5px red then 2px transparent -> repeat this!*/
+    .button {
+      background-color: #ffc500;
+      border-radius: 7px;
+      color: #4c4c4c;
+      padding: 5px 20px;
+      text-align: center;
+      font-size: 13px;
+      margin: 4px 4px;
+      cursor: pointer;
     }
-  }
+    .button:hover{
+      background-color: #ffb100;
+      transition: all ease 0.3s;
+      color: black;
+    }
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 0px;
+      margin-top: 0px;
+      padding: 0px;
+      margin: 0px;
+    }
+    .flex-child {
+        flex: 1;
+        border: 1.5px dotted white;
+        border-radius: 10px;
+        padding: 5px;
+        margin:5px;
+    }
+    .dot {
+      height: 10px;
+      width: 10px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .dashedline {
+      margin-bottom: 4px;
+      height: 1.5px;
+      width: 50px;
+      background-color: black;
+      display: inline-block;
+      background:
+        repeating-linear-gradient(to right,black 0,black 5px,transparent 5px,transparent 7px)
+        /*5px red then 2px transparent -> repeat this!*/
+      }
+    }
   </style>
 </head>
 
-<body data-new-gr-c-s-check-loaded="8.892.0" data-gr-ext-installed="">
+<body>
 
 <!-- Preloading -->
 <div id="preloader" style="display: none;"><div class="spinner"></div></div>
@@ -125,7 +125,9 @@
       <li style="margin-bottom: -20px"><p><span>Email:</span> akreidieh@gmail.com</p></li>
     </ul>
     <div class="col-md-12">
-      <a href="docs/resume.pdf" target="_blank"><button class="site-btn icon">Download CV <i class="fa fa-download" aria-hidden="true"></i></button></a>
+      <a href="docs/resume.pdf" target="_blank">
+        <button class="site-btn icon">Download CV <i class="fa fa-download" aria-hidden="true"></i></button>
+      </a>
     </div>
   </div>
 </div>
@@ -135,17 +137,16 @@
 
 <!-- Header
 ================================================== -->
-<div class="row">
-<header class="col-md-12">
+<header>
   <nav>
     <div class="row">
       <!-- navigation -->
       <div class="col-md-8 col-sm-8 col-xs-4">
         <ul class="tabs">
-          <li class="active"><a data-toggle="tab" class="home-btn active" href="#home"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-          <li id="projects-tab" class="tab"><a data-toggle="tab" href="#projects">PROJECTS</a></li>
-          <li class="tab"><a data-toggle="tab" href="#publications">PUBLICATIONS</a></li>
-          <li class="tab"><a data-toggle="tab" href="#teaching">WORKSHOPS / TEACHING</a></li>
+          <li class="active"><a id="home-tab" data-toggle="tab" class="home-btn active" href="#home"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+          <li class="tab"><a id="projects-tab" data-toggle="tab" href="#projects">PROJECTS</a></li>
+          <li class="tab"><a id="pub-tab" data-toggle="tab" href="#publications">PUBLICATIONS</a></li>
+          <li class="tab"><a id="workshops-tab" data-toggle="tab" href="#teaching">WORKSHOPS / TEACHING</a></li>
         </ul>
       </div>
       <!-- social media -->
@@ -163,7 +164,8 @@
 
 <!-- Page Content
 ================================================== -->
-<div class="col-md-12">
+<div>
+
   <div id="content" class="tab-content">
 
     <!-- Home Page
@@ -176,13 +178,15 @@
           <div class="section-title"><span></span><h2>About Me</h2></div>
           <p id="test" class="top_30">
             My name is Abdul Rahman (Aboudy) Kreidieh. I am a Ph.D. candidate at the University of California, Berkeley,
-            currently advised by
-            <a href="https://bayen.berkeley.edu/alex-bayen" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Alexandre M. Bayen</a>. I am a member of
+            currently advised by <a href="https://bayen.berkeley.edu/alex-bayen" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Alexandre M. Bayen</a>.
+            I am a member of
             <a href="https://bair.berkeley.edu/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Berkeley Artificial Intelligence Research (BAIR)</a>,
-            <a href="https://deepdrive.berkeley.edu/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Berkeley Deep Drive (BDD)</a>, and
+            <a href="https://deepdrive.berkeley.edu/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Berkeley Deep Drive (BDD)</a>,
+            and
             <a href="https://path.berkeley.edu/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">California PATH</a>,
             and have previously served stints at
-            <a href="https://www.linkedin.com/company/toyota-itc/about/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Toyota InfoTech Labs</a>, and
+            <a href="https://www.linkedin.com/company/toyota-itc/about/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Toyota InfoTech Labs</a>,
+            and
             <a href="https://www.ail-sv.com/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Nissan Alliance SV Lab</a>.
             <br>
             <br>
@@ -208,9 +212,7 @@
           <div class="row">
             <!-- a service -->
             <div class="col-md-4 col-sm-6 col-xs-12">
-              <!-- <button onclick="clear2()">clear2</button> -->
-              <!-- <button onclick="myFunction();" style="color:#404040;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#404040'"> -->
-              <a data-toggle="tab" href="#projects" style="color:#404040;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#404040'">
+              <a href="#" onclick="scroll2FlowProject();return false;" style="color:#404040;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#404040'">
               <div class="service">
                 <div class="icon">
                   <center><img src="img/logos/flow.png" width="100%" style="padding: 7px;"></center>
@@ -222,25 +224,29 @@
             </div>
             <!-- a service -->
             <div class="col-md-4 col-sm-6 col-xs-12">
-              <a data-toggle="tab" href="#projects" style="color:#404040;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#404040'">
+              <a href="#" onclick="scroll2CirclesProject();return false;" style="color:#404040;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#404040'">
               <div class="service">
                 <div class="icon">
                   <center><img src="img/logos/circles.png" width="100%"></center>
                 </div>
                 <span class="title">CIRCLES</span>
-                <p class="little-text"> Using RL and self-driving cars to improve traffic flow and reduce energy consumption.</p>
+                <p class="little-text">
+                  Using RL and self-driving cars to improve traffic flow and reduce energy consumption.
+                </p>
               </div>
               </a>
             </div>
             <!-- a service -->
             <div class="col-md-4 col-sm-6 col-xs-12">
-              <a data-toggle="tab" href="#projects" style="color:#404040;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#404040'">
+              <a href="#" onclick="scroll2HRLProject();return false;" style="color:#404040;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#404040'">
               <div class="service">
                 <div class="icon">
                   <center><img src="img/logos/hrl.png" width="100%"></center>
                 </div>
                 <span class="title">Hierarchical RL</span>
-                <p class="little-text">Exploiting hierarchical design to scale the performance of RL in traffic control settings.</p>
+                <p class="little-text">
+                  Exploiting hierarchical design to scale the performance of RL in traffic control settings.
+                </p>
               </div>
               </a>
             </div>
@@ -302,7 +308,7 @@
     ================================================== -->
     <div id="projects" class="tab-pane fade">
       <!-- Flow projects section -->
-      <div class="row">
+      <div id="projects.flow" class="row">
         <section class="line col-md-12 padding_30 padbot_45">
           <div class="section-title"><span></span><h2 s>Flow</h2></div>
           <div class="top_60" style="float:right;width:55%;padding-left:2%;">
@@ -315,7 +321,6 @@
             <a href="https://www.aimsun.com/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">Aimsum</a>)
             and reinforcement learning libraries
             (<a href="https://docs.ray.io/en/releases-1.5.1/rllib.html" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">RLlib</a>,
-            <!-- <a href="https://rllab.readthedocs.io/en/latest/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">rllab</a>, -->
             <a href="https://stable-baselines.readthedocs.io/en/master/" target="_blank" style="color:#808080;" onMouseOver="this.style.color='#ffb100'" onMouseOut="this.style.color='#808080'">stable-baselines</a>,
             etc.) within an MDP formalism of traffic whereby features such as network geometry and agent behaviors may
             be flexibly assigned. You can learn more about these findings and explore the framework for yourself via the
@@ -336,7 +341,7 @@
       </div>
 
       <!-- CIRCLES projects section -->
-      <div id "projects.circles" style="display: block;" class="row" class="tab-pane fade">
+      <div id="projects.circles"  class="row">
         <section class="line graybg col-md-12 padding_30 padbot_45">
           <div class="section-title"><span></span><h2>CIRCLES</h2></div>
           <div class="top_60" style="float:right;width:55%;padding-left:2%;">
@@ -376,7 +381,7 @@
       </div>
 
       <!-- Hierarchical RL projects section -->
-      <div class="row">
+      <div id="projects.hrl" class="row">
         <section class="line col-md-12 padding_30 padbot_45">
           <div class="section-title"><span></span><h2>Inter-Level Cooperation in Hierarchical Reinforcement Learning</h2></div>
           <p  align="right" class="top_30">
@@ -499,35 +504,31 @@
           <div class="section-title"><span></span><h2>Workshops / Tutorials</h2></div>
           <h6 class="top_30"><b>Lagrangian Control for Traffic Flow Smoothing in Mixed Autonomy Settings</b></h6>
           <p class="top_15">
-            <b>Organizers:</b> Alexandre Bayen, George J. Pappas, Benedetto Piccoli, Daniel B. Work, Jonathan Sprinkle,
-            Maria Laura Delle Monache, Benjamin Seibold, Cathy Wu, Abdul Rahman Kreidieh, Eugene Vinitsky, Yashar
-            Zeiynali Farid
+            <b>Organizers:</b>
+            Alexandre Bayen, George J. Pappas, Benedetto Piccoli, Daniel B. Work, Jonathan Sprinkle, Maria Laura Delle
+            Monache, Benjamin Seibold, Cathy Wu, Abdul Rahman Kreidieh, Eugene Vinitsky, Yashar Zeiynali Farid
             <br style="margin: 0em auto 0.75em;">
             <b>Time and Location:</b> Conference of Decision-Making and Control (CDC), 2019
             <br style="margin: 0em auto 0.75em;">
-            <b>Webpage:</b> <a href="https://cdc2019.ieeecss.org/workshops.php" target="_blank">https://cdc2019.ieeecss.org/workshops.php</a>
+            <b>Webpage:</b>
+            <a href="https://cdc2019.ieeecss.org/workshops.php" target="_blank">https://cdc2019.ieeecss.org/workshops.php</a>
             <br style="margin: 0em auto 0.75em;">
-            <!-- <br style="margin: 0em auto 0.75em;"> -->
             <table>
               <tr>
                 <th style="padding:5px; padding-left:10px"><b>Session</b></td>
                 <th style="padding:5px; padding-left:10px"><b>Title</b></td>
-                <!-- <th style="padding:5px; padding-left:10px"><b>Slides</b></td> -->
               </tr>
               <tr>
                 <td style="padding:5px; padding-left:10px">1</td>
                 <td style="padding:5px; padding-left:10px">Means Field Models</td>
-                <!-- <td><a class="button" href="#">Download</a></td> -->
               </tr>
               <tr>
                 <td style="padding:5px; padding-left:10px">2</td>
                 <td style="padding:5px; padding-left:10px">Deep Reinforcement Learning (RL)</td>
-                <!-- <td><a class="button" href="#">Download</a></td> -->
               </tr>
               <tr>
                 <td style="padding:5px; padding-left:10px">3</td>
                 <td style="padding:5px; padding-left:10px">Verification of Deep Neural Networks (DNNs)</td>
-                <!-- <td><a class="button" href="#">Download</a></td> -->
               </tr>
             </table>
           </p>
@@ -542,7 +543,6 @@
             <br style="margin: 0em auto 0.75em;">
             <b>Webpage:</b> <a href="https://ieee-itsc.org/2018/tutorials.html" target="_blank">https://ieee-itsc.org/2018/tutorials.html</a>
             <br style="margin: 0em auto 0.75em;">
-            <!-- <br style="margin: 0em auto 0.75em;"> -->
             <table>
               <tr>
                 <th style="padding:5px; padding-left:10px"><b>Session</b></td>
@@ -613,6 +613,7 @@
       <div class="row">
         <section class="line graybg col-md-12 padding_30 padbot_45">
           <div class="section-title"><span></span><h2>Teaching</h2></div>
+
           <h6 class="top_30">
             <b>EE290O | Deep multi-agent reinforcement learning with applications to autonomous traffic</b>
           </h6>
@@ -621,9 +622,11 @@
             <br style="margin: 0em auto 0.75em;">
             <b>Time and Location:</b> University of California, Berkeley, Fall 2018
             <br style="margin: 0em auto 0.75em;">
-            <b>Webpage:</b> <a href="https://flow-project.github.io/EE290O/" target="_blank">https://flow-project.github.io/EE290O/</a>
+            <b>Webpage:</b>
+            <a href="https://flow-project.github.io/EE290O/" target="_blank">https://flow-project.github.io/EE290O/</a>
             <br style="margin: 0em auto 0.75em;">
-            <b>Lecture / Homework Notebooks:</b> <a href="https://github.com/flow-project/EE290O" target="_blank">https://github.com/flow-project/EE290O</a>
+            <b>Lecture / Homework Notebooks:</b>
+            <a href="https://github.com/flow-project/EE290O" target="_blank">https://github.com/flow-project/EE290O</a>
           </p>
 
           <hr>
@@ -642,10 +645,9 @@
       </div>
     </div>
 
-    </div><!-- Content - End -->
- </div> <!-- col-md-12 end -->
+  </div><!-- Content - End -->
 
-</div><!-- row end -->
+</div> <!-- Pange content div end -->
 
 <!-- Footer
 ================================================== -->
@@ -671,19 +673,20 @@
 <script src="css_files/main.js"></script>
 
 <script>
-function clear2() {
-    alert('clear2');
-      // document.getElementById("test").innerHTML = "Hello World";
-  // document.getElementById('projects-tab').setAttribute('aria-expanded', 'true');
+function scroll2FlowProject() {
+    $('#projects-tab').tab('show');
+    window.scrollTo(0, 124);
 }
 
-$(document).ready(function () {
-    $(".outsidelink").click(function () {
-        // $('.nav a[href="' +  $(this).attr("href") + '"]').tab('show');
-        document.getElementById('projects-tab').setAttribute('aria-expanded', 'true');
-    });
-});
-  });
+function scroll2CirclesProject() {
+    $('#projects-tab').tab('show');
+    window.scrollTo(0, 698);
+}
+
+function scroll2HRLProject() {
+    $('#projects-tab').tab('show');
+    window.scrollTo(0, 1350);
+}
 </script>
 
 <!-- for color alternatives -->
